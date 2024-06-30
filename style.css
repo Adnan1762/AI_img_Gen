@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    /*background-image: url('images/bg.jpg');*/
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*Optional: This makes the background fixed while scrolling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Customize the scrollbar with a glass-like effect */
+body::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #3498db, #2980b9); /* Set a gradient for the thumb */
+    border-radius: 5px; /* Set the border radius of the scrollbar thumb */
+    border: 2px solid #3498db; /* Add a border for a glass-like effect */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: transparent; /* Make the scrollbar track transparent */
+  }
+  
+
+
+
+.container1 {
+    position: relative;
+    width: 50rem;
+    height: 15rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.44);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+p {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+.tagline {
+    font-style: italic;
+    background-clip: padding-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: white;
+}
+
+.tagline p {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 500px) {
+    .tagline {
+        font-size: 1rem;
+    }
+}
+
+.container2 {
+    position: relative;
+    width: 50rem;
+    height: 15rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.44);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+}
+
+.container2::before {
+    content: "";
+    position: absolute;
+    background-color: #ed2ff0;
+    width: 120px;
+    height: 120px;
+    filter: blur(140px);
+    left: -20%;
+    top: 10%;
+    z-index: -1000;
+}
+
+.container2::after {
+    content: "";
+    position: absolute;
+    background-color: #675afe;
+    width: 120px;
+    height: 120px;
+    filter: blur(140px);
+    right: -20%;
+    bottom: -10%;
+    z-index: -1000;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.4rem;
+    text-align: justify;
+}
+
+.gen-form {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+input {
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #999;
+    transition: all 0.3s ease;
+}
+
+input:hover,
+input:focus {
+    border-color: #675afe;
+}
+
+button {
+    width: 20%;
+    height: 36px;
+    color: #fff;
+    border: 1px solid #ccc;
+    background: #20232c;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #675afe;
+    border-color: transparent;
+}
+
+#loading {
+    display: none;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+button:disabled,
+button[disabled] {
+    border: 1px solid #999;
+    background-color: #ccc;
+    color: #666;
+    cursor: auto;
+}
+
+.result {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+#image-grid img {
+    max-width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#image-grid img:hover {
+    border-color: #675afe;
+}
+
+.hero {
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tagline1 p {
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styles for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+.image img {
+    max-width: 140%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content h1 {
+    color: #F0ECE5;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.tagline p {
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.container2 p {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+}
